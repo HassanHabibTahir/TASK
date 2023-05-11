@@ -4,24 +4,24 @@
 }
 
 body {
-  background-color: #0D1117;
+  background-color: #0d1117;
   color: #fff;
 }
 
 .react-datepicker__input-container {
-  background: #181B24;
-
+  background: #181b24;
 }
 
 input {
-  background: #181B24;
-  border: 1px solid #181B24;
+  background: #181b24;
+  border: 1px solid #181b24;
   color: #fff;
   height: 35px;
   border: 3px solid rgba(82, 89, 96, 0.26);
   border-radius: 8px;
   outline: none;
   padding-left: 6px;
+  font-weight: 400;
   width: 100%;
   font-size: 17px;
   flex-basis: "100%";
@@ -31,14 +31,22 @@ input {
 
 ::-webkit-input-placeholder {
   /* Edge */
-  color: white;
+  color: grey;
 }
 
 :-ms-input-placeholder {
   /* Internet Explorer */
-  color: white;
+  color: grey;
 }
 
 ::placeholder {
-  color: white;
+  color: grey;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s;
+  transition-delay: background-color 5000s, color 5000s;
 }
