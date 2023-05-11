@@ -20,10 +20,9 @@ export const inputStyle = {
   borderRadius: "8px",
   outline: "none",
   paddingLeft: "6px",
-  fontSize: "17px",
-  fontFamily: "Open Sans",
   fontWight: 400,
   width: "97%",
+  fontSize: "17px",
   color: "#fff",
   flexBasis: "100%",
   paddingTop: "10px",
@@ -106,7 +105,6 @@ const Home = ({ allData, setAllData }) => {
     navigate(`/details/${id}`);
   };
   const handleSearch = (e) => {
-    setStartDate(null)
     setSearch(e.target.value);
   };
   const [startDate, setStartDate] = useState(null);
@@ -124,11 +122,6 @@ const Home = ({ allData, setAllData }) => {
               borderRadius: 4,
               mt: 12,
               border: "1px solid gray",
-              height: { xs: "60vh", md: "75vh" },
-              overflow: "auto",
-              "&::-webkit-scrollbar": {
-                width: "0.4em",
-              },
             }}
           >
             <Typography
@@ -180,12 +173,22 @@ const Home = ({ allData, setAllData }) => {
               </Box>
             </Box>
             {/* )} */}
-            <Card
-              filteredItems={filteredItems}
-              removeData={removeData}
-              editContent={editContent}
-              handleClick={handleClick}
-            />
+            <Box
+              sx={{
+                height: { xs: "50vh", md: "60vh" },
+                overflow: "auto",
+                "&::-webkit-scrollbar": {
+                  width: "0.4em",
+                },
+              }}
+            >
+              <Card
+                filteredItems={filteredItems}
+                removeData={removeData}
+                editContent={editContent}
+                handleClick={handleClick}
+              />
+            </Box>
           </Box>
         </Box>
         <Box
